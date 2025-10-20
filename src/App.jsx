@@ -1,24 +1,9 @@
 import ProfileCard from "./components/ProfileCard";
 import Avatar from "./assets/Avatar.png";
-import "./styles/App.css";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
-  return (
-    <div >
-      <ProfileCard
-        name="Alexander Tejeda"
-        title="Web Developer"
-        handle="alexdtejeda"
-        status="Online"
-        contactText="Contactame"
-        avatarUrl={Avatar}
-        showUserInfo={true}
-        enableTilt={true}
-        enableMobileTilt={false}
-        onContactClick={() => console.log('Contact clicked')}
-      />
-    </div>
-  );
+  return <LandingPage />;
 }
 
 export default App;

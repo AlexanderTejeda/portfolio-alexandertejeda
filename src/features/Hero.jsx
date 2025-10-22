@@ -5,7 +5,23 @@ import "../styles/Hero.css";
 const Hero = () => {
     return (
     <main> 
-        <section className="hero">
+
+        <section className="cardSide">
+            <ProfileCard
+                name="Alexander Tejeda"
+                title="Web Developer"
+                handle="alexdtejeda"
+                status="Online"
+                contactText="Contactame"
+                avatarUrl={Avatar}
+                showUserInfo={true}
+                enableTilt={true}
+                enableMobileTilt={false}
+                onContactClick={() => console.log('Contact clicked')}
+            />
+        </section>
+
+        <section className="introductionSide">
             <aside className="texside">
                 <h1>Desarrollo web moderno y eficiente</h1>
                 <p>
@@ -22,20 +38,7 @@ const Hero = () => {
             </button>
         </section>
 
-        <section className="cardSide">
-            <ProfileCard
-                name="Alexander Tejeda"
-                title="Web Developer"
-                handle="alexdtejeda"
-                status="Online"
-                contactText="Contactame"
-                avatarUrl={Avatar}
-                showUserInfo={true}
-                enableTilt={true}
-                enableMobileTilt={false}
-                onContactClick={() => console.log('Contact clicked')}
-            />
-        </section>
+      
     </main>
     );
 }

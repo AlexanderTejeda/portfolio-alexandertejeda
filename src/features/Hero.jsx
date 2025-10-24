@@ -2,7 +2,7 @@ import ProfileCard from "../components/ProfileCard";
 import Avatar from "../assets/Avatar.png";
 import "../styles/Hero.css";
 
-const Hero = () => {
+const Hero = ({onViewProjects}) => {
     return (
     <main> 
 
@@ -25,14 +25,13 @@ const Hero = () => {
             <aside className="texside">
                 <h1>Desarrollo web moderno y eficiente</h1>
                 <p>
-                    Me especializo en crear aplicaciones web rápidas, limpias y centradas
-                    en la experiencia del usuario. Transformo ideas en interfaces funcionales.
+                    Construyo aplicaciones web que funcionan de verdad. Desde interfaces interactivas hasta backends sólidos, me enfoco en eficiencia, rendimiento y soluciones prácticas para los usuarios.
                 </p>
             </aside>
             
             <button 
                 className="ctaButton"
-                onClick={() => console.log("¡Contáctame!")} 
+                onClick={onViewProjects} 
             >
                 Ver proyectos
             </button>

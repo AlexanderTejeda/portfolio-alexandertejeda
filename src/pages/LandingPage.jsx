@@ -1,9 +1,12 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import { use, useRef } from "react";
 import "../styles/global.css";
 import Hero from "../features/Hero";
 import Projects from "../features/Projects";
 
 const LandingPage = () => {
+ const projectRef = useRef(null);
+
   const { scrollYProgress } = useScroll();
 
   const heroScale = useTransform(scrollYProgress, [0, 0.3], [1, 0.8]);
@@ -12,6 +15,12 @@ const LandingPage = () => {
 
   const projectsZ = useTransform(scrollYProgress, [0.3, 0.6], [200, 0]);
   const projectsOpacity = useTransform(scrollYProgress, [0.3, 0.6], [0, 1]);
+
+    const scrollToProjects = () => {
+    if (projectRef.current) {
+      projectRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <main className="perspective">
@@ -25,15 +34,18 @@ const LandingPage = () => {
             scale: heroScale,
             z: heroZ,
             opacity: heroOpacity,
+            pointerEvents: "auto",
           }}
         >
-          <Hero />
+          <Hero onViewProjects={scrollToProjects} />
         </motion.div>
 
         <motion.div
+          ref={projectRef}
           style={{
             z: projectsZ,
             opacity: projectsOpacity,
+            pointerEvents: "auto",
           }}
         >
           <Projects />

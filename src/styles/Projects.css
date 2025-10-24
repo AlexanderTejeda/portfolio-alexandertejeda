@@ -73,3 +73,59 @@ max-width: 360px;
 .projectInfo a:hover {
   color: #0078ff;
 }
+
+
+
+.projectTech {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+  color: #61dafb; 
+}
+
+.techIcon {
+  font-size: 1.5rem;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.techIcon:hover {
+  transform: scale(1.2);
+  color: #fff;
+}
+
+.projectLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.projectButton {
+  background: #007bff;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.projectButton:hover {
+  background: #0056d2;
+}
+
+.githubButton {
+  color: #fff;
+  background: #24292e;
+  padding: 0.6rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.githubButton:hover {
+  background: #333;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
